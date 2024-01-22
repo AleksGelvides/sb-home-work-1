@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @ComponentScan("org.example")
 @Configuration
-@PropertySource("classpath:/application-test.properties")
-@Profile("test")
-public class TestAppConfig {
+@PropertySource("classpath:/application-init.properties")
+@Profile("init")
+public class InitAppConfig {
 }

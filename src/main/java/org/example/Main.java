@@ -3,8 +3,8 @@ package org.example;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.example.config.DefaultAppConfig;
-import org.example.domain.Storage;
 import org.example.domain.User;
+import org.example.domain.UserStorage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(DefaultAppConfig.class);
         Scanner scanner = new Scanner(System.in);
-        Storage storage = context.getBean(Storage.class);
+        UserStorage storage = context.getBean(UserStorage.class);
 
         while (true) {
             System.out.println("\"all\" - получить всех пользователей");
